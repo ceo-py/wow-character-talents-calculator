@@ -1,45 +1,32 @@
-const spec = {
-    G7: [0, 0, 5],
-    I7: [5, 5, 5],
-    E11: [3, 3, 3],
-    G11: [2, 2, 2],
-    K11: [0, 0, 2],
-    E15: [1, 0, 3],
-    G15: [3, 0, 3],
-    I15: [1, 1, 1],
-    K15: [0, 0, 2],
-    G19: [0, 0, 5],
-    I19: [3, 0, 3],
-    Q7: [2, 2, 2],
-    S7: [3, 3, 3],
-    U7: [0, 0, 5],
-    Q11: [0, 0, 5],
-    S11: [2, 2, 3],
-    U11: [3, 3, 3],
-    Q15: [3, 3, 3],
-    S15: [1, 1, 1],
-    U15: [2, 2, 2],
-    S19: [1, 1, 5],
-    U19: [3, 3, 3],
-    Q23: [0, 1, 1],
-    S23: [5, 5, 5],
-    W23: [0, 0, 2],
-    Q27: [2, 2, 2],
-    U27: [5, 5, 5],
-    Q31: [2, 3, 3],
-    S31: [1, 1, 1],
-    U31: [0, 2, 3],
-    S35: [5, 5, 5],
-    U35: [0, 3, 3],
-    Q39: [3, 3, 3],
-    S39: [1, 1, 1],
-    U39: [3, 3, 3],
-    Q43: [0, 0, 2],
-    U43: [5, 5, 5],
-    S47: [1, 1, 1],
-};
+function sortTickets(arr = [], criteria = "") {
+    class Ticket {
+        constructor(destination, price, status) {
+            this.destination = destination;
+            this.price = price;
+            this.status = status;
+        }
+    }
+    let result = [];
+    for (let line of arr) {
+        let tokens = line.split("|");
+        let city = tokens[0];
+        let price = Number(tokens[1]);
+        let status = tokens[2];
+        result.push(new Ticket(city, price, status));
+    }
 
-Object.keys(spec).slice(11, 37).forEach(function (cell) {
-    console.log(cell);
-    
-});
+    switch (criteria) {
+        case 'destination':
+            result.sort((a, b) => a.destination.localeCompare(b.destination));
+            break;
+        case 'price':
+            result.sort((a, b) => a.price - b.price);
+            break;
+        case 'status':
+            result.sort((a, b) => a.status.localeCompare(b.status));
+            break;
+        default:
+            break;
+    }
+    return result;
+}
