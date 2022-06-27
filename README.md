@@ -8,3 +8,8 @@ Preset:
 Talent dependancy:
 ![ScreenShot](https://cdn.discordapp.com/attachments/983670671647313930/983680725364654121/HolyTree.gif)
 
+
+You can make a copy of the spreadsheet to use full potention.
+
+https://docs.google.com/spreadsheets/d/1KX4houXMSFoUPJKt9A1V_qiZV1VP9-05GtD3du8ccng/edit#gid=0
+
