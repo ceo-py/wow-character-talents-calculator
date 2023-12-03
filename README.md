@@ -3,10 +3,10 @@ Google Apps scripts to create and manage WoW character talent tree with all depe
 You can click on preset talent choices or make completly new one on your own.
 
 Preset: 
-![image](https://github.com/ceo-py/Project-Pictures/blob/main/wow-character-talents-calculator/TalentSwapPreSet.gif)
+![image](https://github.com/ceo-py/Project-Pictures/blob/main/wow-character-talents-calculator/TalentSwapPreSet.gif?raw=true)
 
 Talent dependancy:
-![ScreenShot](https://github.com/ceo-py/Project-Pictures/blob/main/wow-character-talents-calculator/HolyTree.gif)
+![ScreenShot](https://github.com/ceo-py/Project-Pictures/blob/main/wow-character-talents-calculator/HolyTree.gif?raw=true)
 
 
 You can make a copy of the spreadsheet to use full potention.
